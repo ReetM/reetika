@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>CucumberJava</td>
+                          <td>1</td>
+                        <td>31 Aug 2022, 06:03</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.Navigate_to_Calculator_Home_Page()</td>
+                <td>3</td>
+                <td class="duration" data-value="21557290100">21s 557ms</td>
+                <td class="duration" data-value="7185763366">7s 185ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.User_enters_Personal_details(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="10261270100">10s 261ms</td>
+                <td class="duration" data-value="10261270100">10s 261ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.User_has_calculated_borrowing_estimate_with_living_expenses(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="85079000">085ms</td>
+                <td class="duration" data-value="85079000">085ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.User_hit_start_over_to_clear_form()</td>
+                <td>1</td>
+                <td class="duration" data-value="5111756000">5s 111ms</td>
+                <td class="duration" data-value="5111756000">5s 111ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.Verify_borrowing_estimate(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="10048053100">10s 048ms</td>
+                <td class="duration" data-value="10048053100">10s 048ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.Verify_the_Error_Message_on_Screen()</td>
+                <td>1</td>
+                <td class="duration" data-value="4064224000">4s 064ms</td>
+                <td class="duration" data-value="4064224000">4s 064ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.click_on_workout_how_much_i_could_borrow_button()</td>
+                <td>2</td>
+                <td class="duration" data-value="16235526600">16s 235ms</td>
+                <td class="duration" data-value="8117763300">8s 117ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.enter_your_earnings(java.lang.String,java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="302357300">302ms</td>
+                <td class="duration" data-value="302357300">302ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.enter_your_expenses(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="528112300">528ms</td>
+                <td class="duration" data-value="528112300">528ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.form_should_clear()</td>
+                <td>1</td>
+                <td class="duration" data-value="10081736600">10s 081ms</td>
+                <td class="duration" data-value="10081736600">10s 081ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.initialize()</td>
+                <td>3</td>
+                <td class="duration" data-value="6338908000">6s 338ms</td>
+                <td class="duration" data-value="2112969333">2s 112ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.tierDown()</td>
+                <td>3</td>
+                <td class="duration" data-value="2317504500">2s 317ms</td>
+                <td class="duration" data-value="772501500">772ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.user_has_calculated_borrowing_estimate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1080322500">1s 080ms</td>
+                <td class="duration" data-value="1080322500">1s 080ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.BorrowingEstimateSteps.validate_page_loaded_successfully()</td>
+                <td>3</td>
+                <td class="duration" data-value="32825400">032ms</td>
+                <td class="duration" data-value="10941800">010ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>14</td>
+              <td>23</td>
+              <td class="duration">1m 28s 044ms</td>
+              <td class="duration">3s 828ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

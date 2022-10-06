@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinitions.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 88.944 s <<< FAILURE! - in StepDefinitions.TestRunner
+Calculating borrowing estimate(Case study borrowing calculator)  Time elapsed: 49.757 s  <<< FAILURE!
+org.junit.ComparisonFailure: Estimated Amount doesn't Matched expected:<$4[51],000> but was:<$4[82],000>
+
